@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ | Ogawa Mami</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <nav class="nav">
+        <a href="#top" class="nav__brand">Mami</a>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="sr-only">メニューを開く</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__links" id="primary-navigation">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero__text">
+        <p class="hero__kicker">Web Developer / Designer</p>
+        <h1>小川 真美</h1>
+        <p>ユーザーを第一に考えた体験設計と、細部までこだわったフロントエンド実装が得意なクリエイターです。</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects">制作実績を見る</a>
+          <a class="btn btn--ghost" href="#contact">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="container section__content">
+        <div class="section__header">
+          <span class="section__kicker">About</span>
+          <h2>自己紹介</h2>
+        </div>
+        <div class="about">
+          <div class="about__image" role="img" aria-label="小川真美の写真"></div>
+          <div class="about__text">
+            <p>スタートアップでデザイナーとしてキャリアをスタートし、Web制作会社での実務経験を経て現在はフリーランスとして活動中。UIデザインと実装の双方を理解したアプローチで、課題発見から改善提案まで伴走します。</p>
+            <ul class="about__list">
+              <li><strong>主な業務:</strong> UI/UX設計、フロントエンド開発、ブランドデザイン</li>
+              <li><strong>得意な領域:</strong> React / Vue、Figma、プロトタイピング、アクセシビリティ改善</li>
+              <li><strong>好きなこと:</strong> コーヒーと旅先の写真撮影、文章を書くこと</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="skills">
+      <div class="container section__content">
+        <div class="section__header">
+          <span class="section__kicker">Skills</span>
+          <h2>スキルセット</h2>
+        </div>
+        <div class="skills">
+          <article class="card">
+            <h3>Design</h3>
+            <ul>
+              <li>UI/UX設計・ワイヤーフレーム作成</li>
+              <li>デザインシステム構築</li>
+              <li>ブランドガイドライン策定</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Development</h3>
+            <ul>
+              <li>フロントエンド開発 (React / Vue / TypeScript)</li>
+              <li>パフォーマンス & アクセシビリティ改善</li>
+              <li>Jamstack構成 (Next.js / Nuxt.js / Netlify)</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Process</h3>
+            <ul>
+              <li>課題ヒアリング & リサーチ</li>
+              <li>アジャイル開発・スクラム連携</li>
+              <li>ユーザーテスト / ヒューマンインタビュー</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container section__content">
+        <div class="section__header">
+          <span class="section__kicker">Projects</span>
+          <h2>制作実績</h2>
+        </div>
+        <div class="projects">
+          <article class="project-card">
+            <div class="project-card__image project-card__image--a"></div>
+            <div class="project-card__body">
+              <h3>Fintechダッシュボード</h3>
+              <p>ユーザーの金融情報を一元管理するためのダッシュボード。ユーザビリティテストを通じて主要導線を改善し、KPIである日次アクティブ率を120%向上。</p>
+              <ul class="project-card__meta">
+                <li>Role: UI/UX Designer, Frontend Developer</li>
+                <li>Stack: Figma, React, TypeScript, Recharts</li>
+              </ul>
+              <a href="#" class="project-card__link">ケーススタディを見る</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__image project-card__image--b"></div>
+            <div class="project-card__body">
+              <h3>ライフスタイルメディア</h3>
+              <p>ブランドの世界観を伝えるためのコンテンツメディア。トーン＆マナー設計と撮影ディレクションを担当し、サイト公開後3ヶ月でPVが180%増加。</p>
+              <ul class="project-card__meta">
+                <li>Role: Creative Director, Frontend Developer</li>
+                <li>Stack: Nuxt.js, SCSS, Contentful</li>
+              </ul>
+              <a href="#" class="project-card__link">ケーススタディを見る</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__image project-card__image--c"></div>
+            <div class="project-card__body">
+              <h3>教育系モバイルアプリ</h3>
+              <p>学習継続率を高めるためのゲーミフィケーション施策を提案し、UI刷新とコンテンツ設計をリード。App Storeレビュー平均が2.8→4.6へ改善。</p>
+              <ul class="project-card__meta">
+                <li>Role: Product Designer</li>
+                <li>Stack: Figma, Protopie, SwiftUI (collaboration)</li>
+              </ul>
+              <a href="#" class="project-card__link">ケーススタディを見る</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted">
+      <div class="container section__content timeline">
+        <div class="section__header">
+          <span class="section__kicker">Career</span>
+          <h2>これまでの歩み</h2>
+        </div>
+        <ul class="timeline__list">
+          <li>
+            <span class="timeline__year">2024</span>
+            <p>フリーランスとして独立し、SaaS企業のデザインパートナーとして活動開始。</p>
+          </li>
+          <li>
+            <span class="timeline__year">2021</span>
+            <p>Web制作会社にてリードデザイナーとして、企業サイトやアプリのUI刷新を担当。</p>
+          </li>
+          <li>
+            <span class="timeline__year">2018</span>
+            <p>スタートアップの初期メンバーとして新規プロダクト立ち上げに参画。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container section__content">
+        <div class="section__header">
+          <span class="section__kicker">Contact</span>
+          <h2>お問い合わせ</h2>
+        </div>
+        <div class="contact">
+          <p>プロジェクトのご相談やお仕事のご依頼など、お気軽にご連絡ください。</p>
+          <a href="mailto:hello@mamidesign.jp" class="btn btn--primary">メールで連絡する</a>
+          <div class="contact__socials">
+            <a href="#" aria-label="Behance">Behance</a>
+            <a href="#" aria-label="Dribbble">Dribbble</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>&copy; <span id="js-year"></span> Ogawa Mami. All rights reserved.</p>
+      <a href="#top" class="footer__top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
