@@ -89,7 +89,21 @@ body>header,body>main,body>footer{display:none}
 }
 @media(max-width:350px){#works{padding-left:18px;padding-right:18px}#works .services{gap:18px 12px}#works .service-link{padding:16px 10px}#works .service-action{font-size:9px}}
 @media(prefers-reduced-motion:reduce){#works .service-link{transition:none}}
-</style></head><body><aside class="portfolio-entry" aria-label="作品と展示のポートフォリオ"><a href="portfolio/"><strong>PORTFOLIO</strong><span>作品と展示を見る ↗</span></a></aside><div class="desktop-design" aria-label="MAMI アーティストサイト PC版">
+</style><style>/* Mobile header: keep the three destinations visible and uncluttered. */
+@media(max-width:800px){
+header nav{justify-content:flex-end}
+header nav .logo{display:none}
+header nav .links{width:100%;justify-content:flex-end;gap:7px}
+header nav .links a{display:inline-flex!important;align-items:center;justify-content:center;padding:10px 11px;font-size:9px;letter-spacing:.08em;white-space:nowrap}
+header nav .links a:nth-child(2){display:none!important}
+header nav .links a:nth-child(3){display:inline-flex!important;border:1px solid #0b1935}
+header nav .links .ig{padding:11px 10px}
+}
+@media(max-width:370px){
+header nav .links{gap:4px}
+header nav .links a{padding-left:8px;padding-right:8px;font-size:8px}
+header nav .links .ig{padding-left:8px;padding-right:8px}
+}</style></head><body><aside class="portfolio-entry" aria-label="作品と展示のポートフォリオ"><a href="portfolio/"><strong>PORTFOLIO</strong><span>作品と展示を見る ↗</span></a></aside><div class="desktop-design" aria-label="MAMI アーティストサイト PC版">
 <img class="desktop-artwork" src="assets/desktop-design.jpg" width="864" height="1536" alt="MAMI Abstract Artist。地球で一緒に遊ぼうぜ！ 色鮮やかな丸い抽象アート、制作風景、作品とアートグッズ。言葉にならない感覚を、色と形にしています。">
 <nav aria-label="PC版メニュー">
 <a class="design-link" style="left:27%;top:.5%;width:17%;height:3%" href="#desktop-top" aria-label="MAMI トップ"><span>MAMI</span></a>
