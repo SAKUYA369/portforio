@@ -39,7 +39,29 @@ body>header,body>main,body>footer{display:none}
 .links a{border-radius:24px;padding:10px;transition:background-color .18s,color .18s}
 .links a:hover,.links a:active{background:#e8368e;color:#fff}
 .links a:focus-visible{outline:3px solid #12b6bd;outline-offset:3px;background:#e8368e;color:#fff}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.desktop-nav-actions .nav-action,.links a{transition:none}}</style></head><body><aside class="portfolio-entry" aria-label="作品と展示のポートフォリオ"><a href="portfolio/"><strong>PORTFOLIO</strong><span>作品と展示を見る ↗</span></a></aside><div class="desktop-design" aria-label="MAMI アーティストサイト PC版">
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.desktop-nav-actions .nav-action,.links a{transition:none}}</style><style>/* Make every existing link visibly interactive without changing its destination. */
+@media(min-width:801px){
+.desktop-design .design-link{cursor:pointer;border-radius:8px;transition:background-color .18s,box-shadow .18s}
+.desktop-design .work-link{box-shadow:inset 0 0 0 1px #e8368e55}
+.desktop-design .work-link::before{content:"↗";position:absolute;right:10px;top:10px;width:25px;height:25px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#faf8f2;color:#bd2069;box-shadow:0 2px 8px #0b19351f;font:700 17px/1 system-ui,sans-serif;transition:background-color .18s,color .18s}
+.desktop-design .design-link:hover,.desktop-design .design-link.is-selected{background:#e8368e20;box-shadow:inset 0 0 0 3px #e8368e}
+.desktop-design .work-link:hover::before,.desktop-design .work-link.is-selected::before{background:#e8368e;color:#fff}
+.desktop-design .design-link:active{background:#e8368e38;box-shadow:inset 0 0 0 4px #bd2069}
+.desktop-design .design-link:focus-visible{outline:3px solid #12b6bd;outline-offset:3px;background:#e8368e20;box-shadow:inset 0 0 0 3px #e8368e}
+.desktop-design .design-link:not(.work-link):not([href="#desktop-top"]){box-shadow:inset 0 0 0 1px #ffffff88}
+.desktop-design .design-link:not(.work-link):not([href="#desktop-top"]):hover,.desktop-design .design-link:not(.work-link):not([href="#desktop-top"]).is-selected{box-shadow:inset 0 0 0 3px #e8368e}
+}
+.service-link{padding:22px 12px 14px;border-radius:0 0 12px 12px;cursor:pointer;transition:background-color .18s,box-shadow .18s}
+.service-link:hover,.service-link.is-selected{background:#fbe6ef;box-shadow:inset 0 0 0 2px #e8368e}
+.service-link:active{background:#f7cfdf;opacity:1}
+.service-link:hover h3,.service-link.is-selected h3{color:#bd2069}
+.portfolio-entry a,.btn,.logo{cursor:pointer;transition:background-color .18s,color .18s,box-shadow .18s}
+.portfolio-entry a:hover,.portfolio-entry a:active{background:#e8368e;color:white;border-color:#e8368e}
+.btn:hover{background:#bd2069;box-shadow:0 5px 15px #bd206933}
+.btn:focus-visible,.logo:focus-visible{outline:3px solid #12b6bd;outline-offset:4px}
+.logo:hover{color:#e8368e}
+@media(prefers-reduced-motion:reduce){.desktop-design .design-link,.desktop-design .work-link::before,.service-link,.portfolio-entry a,.btn,.logo{transition:none}}
+</style></head><body><aside class="portfolio-entry" aria-label="作品と展示のポートフォリオ"><a href="portfolio/"><strong>PORTFOLIO</strong><span>作品と展示を見る ↗</span></a></aside><div class="desktop-design" aria-label="MAMI アーティストサイト PC版">
 <img class="desktop-artwork" src="assets/desktop-design.jpg" width="864" height="1536" alt="MAMI Abstract Artist。地球で一緒に遊ぼうぜ！ 色鮮やかな丸い抽象アート、制作風景、作品とアートグッズ。言葉にならない感覚を、色と形にしています。">
 <nav aria-label="PC版メニュー">
 <a class="design-link" style="left:27%;top:.5%;width:17%;height:3%" href="#desktop-top" aria-label="MAMI トップ"><span>MAMI</span></a>
@@ -63,6 +85,13 @@ document.querySelectorAll('.desktop-nav-actions a[href^="#"]').forEach(function(
 link.addEventListener('click',function(){
 document.querySelectorAll('.desktop-nav-actions [aria-current]').forEach(function(item){item.removeAttribute('aria-current')});
 link.setAttribute('aria-current','location');
+});
+});
+</script><script>
+document.querySelectorAll('.desktop-design .design-link,.service-link').forEach(function(link){
+link.addEventListener('click',function(){
+document.querySelectorAll('.design-link.is-selected,.service-link.is-selected').forEach(function(item){item.classList.remove('is-selected')});
+link.classList.add('is-selected');
 });
 });
 </script></body></html>
