@@ -103,7 +103,15 @@ header nav .links .ig{padding:11px 10px}
 header nav .links{gap:4px}
 header nav .links a{padding-left:8px;padding-right:8px;font-size:8px}
 header nav .links .ig{padding-left:8px;padding-right:8px}
-}</style></head><body><aside class="portfolio-entry" aria-label="作品と展示のポートフォリオ"><a href="portfolio/"><strong>PORTFOLIO</strong><span>作品と展示を見る ↗</span></a></aside><div class="desktop-design" aria-label="MAMI アーティストサイト PC版">
+}</style><style>
+@media (max-width:900px){
+.gallery .art-strip{grid-template-columns:1fr;grid-template-areas:"main" "detail" "motion";gap:22px}
+.gallery .art-piece-main,.gallery .art-piece-detail,.gallery .art-piece-motion{width:100%;transform:none}
+.gallery .art-piece-main img{height:300px;object-position:center}
+.gallery .art-piece-detail img,.gallery .art-piece-motion img{height:230px;object-position:center 45%}
+.gallery .art-piece figcaption{font-size:13px;left:12px;bottom:12px}
+}
+</style></head><body><aside class="portfolio-entry" aria-label="作品と展示のポートフォリオ"><a href="portfolio/"><strong>PORTFOLIO</strong><span>作品と展示を見る ↗</span></a></aside><div class="desktop-design" aria-label="MAMI アーティストサイト PC版">
 <img class="desktop-artwork" src="assets/desktop-design.jpg" width="864" height="1536" alt="MAMI Abstract Artist。地球で一緒に遊ぼうぜ！ 色鮮やかな丸い抽象アート、制作風景、作品とアートグッズ。言葉にならない感覚を、色と形にしています。">
 <nav aria-label="PC版メニュー">
 <a class="design-link" style="left:27%;top:.5%;width:17%;height:3%" href="#desktop-top" aria-label="MAMI トップ"><span>MAMI</span></a>
